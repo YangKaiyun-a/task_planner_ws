@@ -6,17 +6,15 @@ from std_msgs.msg import String
 import json
 import os
 import time
-import openai
+from openai import OpenAI
 from llm_config.user_config import UserConfig
 from llm_model.database_manager import DatabaseManager
 
 
 
 db_manager = DatabaseManager()
-
 config = UserConfig()
-openai.api_key = config.openai_api_key
-openai.base_url = config.base_url
+client = OpenAI(api_key=config.openai_api_key, base_url=config.base_url)
 
 
 
@@ -54,9 +52,9 @@ class ChatGPTNode(Node):
 
 
     def generate_chatgpt_response(self, messages_input):
-        response = openai.chat.completions.create(
-            model=config.openai_model,
-            messages=[
+        response = client.chat.completions.create(
+            model = config.openai_model,
+            messages = [
                 {
                     "role": "system",
                     "content": config.system_prompt
@@ -66,7 +64,7 @@ class ChatGPTNode(Node):
                     "content": messages_input
                 }
             ],
-            temperature=config.openai_temperature
+            temperature = config.openai_temperature
         )
 
         # 获取模型回复文本
