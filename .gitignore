@@ -6,3 +6,5 @@ install/
 log/
 
 .vscode/
+
+.idea/
