@@ -13,9 +13,9 @@ HUAWEI_KEY = "51xbnNKKk4sBf6uEpFKMNr-zPC1FeJlPxIjpSyLjQkKaJeQrh4TnFkG48SvlGvzwfQ
 HUAWEI_URL = "https://api.modelarts-maas.com/v1"
 
 
-API_SECRET_KEY = HUAWEI_KEY
-BASE_URL = HUAWEI_URL
-OPENAI_MODEL = deepseek_v3_2_exp
+API_SECRET_KEY = ZHIZENGZENG_KEY
+BASE_URL = ZHIZENGZENG_URL
+OPENAI_MODEL = gpt_4o
 SYSTEM_PROMPT = (
     "你是一个机器人任务规划助手。"
     "请将用户的自然语言任务拆分为多个步骤，"
