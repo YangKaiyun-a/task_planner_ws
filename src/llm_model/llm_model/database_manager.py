@@ -150,11 +150,11 @@ class DatabaseManager:
             self.cursor.execute(
                 insert_sql,
                 (
-                    workflow_name,                      # 外部提供
-                    create_time,                        # 当前时间
-                    1,                                   # create_by 固定为 1
-                    0,                                   # status 固定为 0
-                    1,                                   # robot_id 固定为 1
+                    workflow_name,                          # 外部提供
+                    create_time,                            # 当前时间
+                    1,                                      # create_by 固定为 1
+                    0,                                      # status 固定为 0
+                    1,                                      # robot_id 固定为 1
                     json.dumps(workflow_json, ensure_ascii=False)  # JSON 转字符串
                 )
             )

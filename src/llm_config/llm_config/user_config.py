@@ -13,7 +13,8 @@ HUAWEI_KEY = "51xbnNKKk4sBf6uEpFKMNr-zPC1FeJlPxIjpSyLjQkKaJeQrh4TnFkG48SvlGvzwfQ
 HUAWEI_URL = "https://api.modelarts-maas.com/v1"
 
 
-API_SECRET_KEY = ZHIZENGZENG_KEY
+
+API_SECRET_KEY = ZHIZENGZENG_KEY        
 BASE_URL = ZHIZENGZENG_URL
 OPENAI_MODEL = gpt_4o
 SYSTEM_PROMPT = (
@@ -51,6 +52,11 @@ class UserConfig:
         self.chat_history_max_length = 4000
         self.system_prompt = SYSTEM_PROMPT
         self.chat_history = [{"role": "system", "content": self.system_prompt}]
+
+        # 语音识别
+        self.xfyun_app_id = "09bc103c"
+        self.xfyun_api_key = "a7e2c723fae744331708434d1ce326b6"
+        self.xfyun_api_secret = "ZGUwODdhYTE5YWJkNTdiODc1ZWRmMTNi"
 
 
         
